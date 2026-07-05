@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video Ads Launchpad — AdOutreach</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=Caveat:wght@700&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+  body { margin: 0; overflow-x: hidden; background: #FFFFFF; color: #0F2A44; font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  image-slot { display: block; width: 100%; height: 100%; }
+  @keyframes aoMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes aoFadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</helmet>
+
+<!-- ============ NAV ============ -->
+<div data-screen-label="Nav" style="position:fixed;top:0;left:0;right:0;z-index:50">
+  <div style="{{ navBgStyle }}"></div>
+  <div style="position:relative;max-width:1440px;margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;background:#FFFFFF;border-radius:8px;padding:7px 12px;box-shadow:0 1px 2px rgba(10,31,60,0.06), 0 1px 3px rgba(10,31,60,0.08)">
+      <img src="assets/adoutreach-logo-full.png" alt="AdOutreach" style="height:24px;display:block">
+    </div>
+    <div style="display:flex;align-items:center;gap:20px;min-width:0">
+      <span style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.72);letter-spacing:0.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0">VIDEO ADS LAUNCHPAD</span>
+      <a href="https://adoutreach.com/apply" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.02em;color:#FFFFFF;background:#FF5A3C;padding:11px 22px;border-radius:9999px;text-decoration:none;box-shadow:0 8px 24px rgba(255,90,60,0.35);transition:transform 200ms cubic-bezier(0.22,1,0.36,1), background 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#E04525;transform:translateY(-1px)">Apply Now →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<div data-screen-label="Hero" style="position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 70% -10%, rgba(0,194,214,0.24), transparent 60%), radial-gradient(800px 500px at 10% 20%, rgba(73,222,50,0.18), transparent 60%), linear-gradient(180deg, #0A1F3C 0%, #060F22 100%)">
+  <div style="position:absolute;top:-120px;right:-140px;width:420px;height:420px;background:linear-gradient(135deg, rgba(127,232,92,0.14), rgba(0,194,214,0.14));clip-path:polygon(8% 12%, 96% 0%, 62% 92%);pointer-events:none"></div>
+  <div style="position:absolute;bottom:-160px;left:-160px;width:380px;height:380px;background:linear-gradient(135deg, rgba(73,222,50,0.10), rgba(0,167,178,0.10));clip-path:polygon(0% 20%, 100% 8%, 55% 100%);pointer-events:none"></div>
+
+  <!-- Variant A: Centered classic VSL -->
+  <sc-if value="{{ heroCentered }}" hint-placeholder-val="{{ true }}">
+    <div style="position:relative;max-width:1200px;margin:0 auto;padding:76px 24px 96px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#49DE32;animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) both">The AdOutreach Launchpad</div>
+      <h1 style="font-family:'Poppins',sans-serif;font-size:clamp(34px,4vw,50px);font-weight:800;line-height:1.08;letter-spacing:-0.02em;color:#FFFFFF;max-width:1000px;margin:18px 0 0;text-wrap:balance;animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) 80ms both">We Launch Your Ads <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Done-For-You</span><br>Then Train You to Run Them</h1>
+      <p style="font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.78); max-width: 760px; margin: 22px 0 0; animation: aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) 160ms both">A <b>Predictable Client Acquisition System</b> Powered by <span style="color: rgb(255, 255, 255);"><u>Video Marketing, AI &amp; Paid Ads</u></span> - <b>Built For You,</b>&nbsp;then we Hand You the Keys &amp; Train You with <b>6 Months of Daily Support.</b></p>
+      <div style="position:relative;width:min(920px,100%);margin:44px 0 0;animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) 240ms both">
+        <div style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.14);box-shadow:0 30px 80px rgba(3,10,22,0.6), 0 0 60px rgba(0,194,214,0.18);background:#000000">
+          <iframe src="https://www.youtube-nocookie.com/embed/NcMTZPeYgAQ?rel=0&amp;playsinline=1" referrerPolicy="strict-origin-when-cross-origin" title="AdOutreach Launchpad - Watch the Video" style="display:block;width:100%;aspect-ratio:16/9;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen="{{ true }}"></iframe>
+        </div>
+        <div style="margin-top:14px;font-size:13.5px;font-weight:600;color:rgba(255,255,255,0.62)">▶ Watch the video first - if it doesn't load, here's the YouTube link: <a href="https://www.youtube.com/watch?v=NcMTZPeYgAQ" target="_blank" rel="noopener" style="color:#00C2D6;text-decoration:underline">youtube.com/watch?v=NcMTZPeYgAQ</a></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px;margin-top:36px;animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) 320ms both">
+        <a href="https://adoutreach.com/apply" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;letter-spacing:0.02em;color:#FFFFFF;background:#FF5A3C;padding:18px 36px;border-radius:9999px;text-decoration:none;box-shadow:0 8px 24px rgba(255,90,60,0.35), 0 0 24px rgba(255,90,60,0.25);transition:transform 200ms cubic-bezier(0.22,1,0.36,1), background 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#E04525;transform:translateY(-2px)">Apply Now →</a>
+        <a href="#process" style="display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#FFFFFF;background:transparent;border:1.5px solid rgba(255,255,255,0.28);padding:16px 30px;border-radius:9999px;text-decoration:none;transition:border-color 200ms, color 200ms" style-hover="border-color:#7FE85C;color:#7FE85C">See How It Works ↓</a>
+      </div>
+      <div style="font-size:13px;color:rgba(255,255,255,0.55);margin-top:14px">Free strategy conversation · No long-term agency retainers</div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:44px;margin-top:52px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.08);width:min(920px,100%)">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">$7.7M+</span><span style="font-size:12.5px;color:rgba(255,255,255,0.6)">Our Own Ad Spend</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">3,000+</span><span style="font-size:12.5px;color:rgba(255,255,255,0.6)">Businesses Served</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">10+ Yrs</span><span style="font-size:12.5px;color:rgba(255,255,255,0.6)">Running Video Ads</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">#60</span><span style="font-size:12.5px;color:rgba(255,255,255,0.6)">Inc. 5000 · 3 Yrs Running</span></div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Variant B: Split copy + video -->
+  <sc-if value="{{ heroSplit }}" hint-placeholder-val="{{ false }}">
+    <div style="position:relative;max-width:1240px;margin:0 auto;padding:76px 24px 96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px;align-items:center">
+      <div style="animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) both">
+        <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#49DE32">The AdOutreach Launchpad</div>
+        <h1 style="font-family:'Poppins',sans-serif;font-size:clamp(36px,3.8vw,56px);font-weight:800;line-height:1.08;letter-spacing:-0.02em;color:#FFFFFF;margin:18px 0 0;text-wrap:balance">We Launch Your Ads <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap">Done-For-You</span> - Then Train You to Run Them</h1>
+        <p style="font-size:18px;line-height:1.55;color:rgba(255,255,255,0.78);max-width:540px;margin:20px 0 0">A predictable client acquisition system powered by <strong style="color:#FFFFFF">AI, video marketing &amp; paid ads</strong> - built for you, launched for you, then handed over with <strong style="color:#FFFFFF">6 months of daily support</strong>.</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px">
+          <a href="https://adoutreach.com/apply" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;letter-spacing:0.02em;color:#FFFFFF;background:#FF5A3C;padding:17px 32px;border-radius:9999px;text-decoration:none;box-shadow:0 8px 24px rgba(255,90,60,0.35), 0 0 24px rgba(255,90,60,0.25);transition:transform 200ms cubic-bezier(0.22,1,0.36,1), background 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#E04525;transform:translateY(-2px)">Apply Now →</a>
+          <a href="#process" style="display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:#FFFFFF;background:transparent;border:1.5px solid rgba(255,255,255,0.28);padding:15px 28px;border-radius:9999px;text-decoration:none;transition:border-color 200ms, color 200ms" style-hover="border-color:#7FE85C;color:#7FE85C">How It Works ↓</a>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.55);margin-top:12px">Free strategy conversation · No long-term agency retainers</div>
+        <div style="display:flex;flex-wrap:wrap;gap:32px;margin-top:36px;padding-top:26px;border-top:1px solid rgba(255,255,255,0.08)">
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'Poppins',sans-serif;font-size:23px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">$7.7M+</span><span style="font-size:12px;color:rgba(255,255,255,0.6)">Our Own Ad Spend</span></div>
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'Poppins',sans-serif;font-size:23px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">3,000+</span><span style="font-size:12px;color:rgba(255,255,255,0.6)">Businesses Served</span></div>
+          <div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'Poppins',sans-serif;font-size:23px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">#60</span><span style="font-size:12px;color:rgba(255,255,255,0.6)">Inc. 5000 · 3 Yrs</span></div>
+        </div>
+      </div>
+      <div style="position:relative;animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) 160ms both">
+        <div style="position:absolute;top:-46px;right:-40px;width:180px;height:180px;background:linear-gradient(135deg, #7FE85C, #00C2D6);opacity:0.35;clip-path:polygon(10% 15%, 100% 0%, 60% 95%)"></div>
+        <div style="position:absolute;bottom:-40px;left:-36px;width:150px;height:150px;background:linear-gradient(135deg, #49DE32, #00A7B2);opacity:0.28;clip-path:polygon(0% 25%, 100% 10%, 50% 100%)"></div>
+        <div style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,0.14);box-shadow:0 30px 80px rgba(3,10,22,0.6), 0 0 60px rgba(0,194,214,0.18);background:#000000">
+          <iframe src="https://www.youtube-nocookie.com/embed/NcMTZPeYgAQ?rel=0&amp;playsinline=1" referrerPolicy="strict-origin-when-cross-origin" title="AdOutreach Launchpad - Watch the Video" style="display:block;width:100%;aspect-ratio:16/9;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen="{{ true }}"></iframe>
+        </div>
+        <div style="position:absolute;left:22px;bottom:-22px;display:flex;align-items:center;gap:10px;background:#FFFFFF;border-radius:9999px;padding:11px 20px;box-shadow:0 20px 60px rgba(10,31,60,0.28)">
+          <span style="display:inline-flex;width:22px;height:22px;border-radius:50%;background:#49DE32;color:#FFFFFF;font-size:13px;font-weight:800;align-items:center;justify-content:center">✓</span>
+          <span style="font-size:13.5px;font-weight:700;color:#0F2A44;font-family:'Poppins',sans-serif">Set Up Correctly From Day One</span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Variant C: Broadcast video-first -->
+  <sc-if value="{{ heroBroadcast }}" hint-placeholder-val="{{ false }}">
+    <div style="position:relative;max-width:1200px;margin:0 auto;padding:76px 24px 96px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <div style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.05);border-radius:9999px;padding:8px 18px;animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) both">
+        <span style="width:8px;height:8px;border-radius:50%;background:#49DE32;box-shadow:0 0 12px rgba(73,222,50,0.8)"></span>
+        <span style="font-size:12.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.85)">The AdOutreach Launchpad</span>
+      </div>
+      <h1 style="font-family:'Poppins',sans-serif;font-size:clamp(32px,3.4vw,48px);font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#FFFFFF;max-width:900px;margin:20px 0 0;text-wrap:balance;animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) 80ms both">Your Ads, Launched <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Done-For-You.</span> Your Team, Trained to Scale Them.</h1>
+      <div style="position:relative;width:min(1000px,100%);margin:36px 0 0;animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) 180ms both">
+        <div style="padding:3px;border-radius:24px;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);box-shadow:0 30px 80px rgba(3,10,22,0.6), 0 0 70px rgba(0,194,214,0.22)">
+          <div style="position:relative;border-radius:21px;overflow:hidden;background:#000000">
+            <iframe src="https://www.youtube-nocookie.com/embed/NcMTZPeYgAQ?rel=0&amp;playsinline=1" referrerPolicy="strict-origin-when-cross-origin" title="AdOutreach Launchpad - Watch the Video" style="display:block;width:100%;aspect-ratio:16/9;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen="{{ true }}"></iframe>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px;margin-top:36px;animation:aoFadeUp 600ms cubic-bezier(0.22,1,0.36,1) 260ms both">
+        <a href="https://adoutreach.com/apply" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;letter-spacing:0.02em;color:#FFFFFF;background:#FF5A3C;padding:18px 36px;border-radius:9999px;text-decoration:none;box-shadow:0 8px 24px rgba(255,90,60,0.35), 0 0 24px rgba(255,90,60,0.25);transition:transform 200ms cubic-bezier(0.22,1,0.36,1), background 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#E04525;transform:translateY(-2px)">Apply Now →</a>
+        <span style="font-size:13px;color:rgba(255,255,255,0.55)">Free strategy conversation · No long-term retainers</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-top:48px;border:1px solid rgba(255,255,255,0.1);border-radius:16px;overflow:hidden">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:18px 36px;border-right:1px solid rgba(255,255,255,0.1)"><span style="font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">$7.7M+</span><span style="font-size:12px;color:rgba(255,255,255,0.6)">Our Own Ad Spend</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:18px 36px;border-right:1px solid rgba(255,255,255,0.1)"><span style="font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">3,000+</span><span style="font-size:12px;color:rgba(255,255,255,0.6)">Businesses Served</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:18px 36px;border-right:1px solid rgba(255,255,255,0.1)"><span style="font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">10+ Yrs</span><span style="font-size:12px;color:rgba(255,255,255,0.6)">Running Video Ads</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2px;padding:18px 36px"><span style="font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">#60</span><span style="font-size:12px;color:rgba(255,255,255,0.6)">Inc. 5000 · 3 Yrs Running</span></div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+<!-- ============ CLIENT LOGO MARQUEE ============ -->
+<div data-screen-label="Client Logos" style="background:#FFFFFF;border-bottom:1px solid rgba(10,31,60,0.08);padding:44px 0 40px">
+  <div data-reveal="up" style="text-align:center;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#6B7693;margin-bottom:26px">Companies We've Helped Grow</div>
+  <div style="overflow:hidden;position:relative">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:120px;background:linear-gradient(90deg,#FFFFFF,rgba(255,255,255,0));z-index:2;pointer-events:none"></div>
+    <div style="position:absolute;right:0;top:0;bottom:0;width:120px;background:linear-gradient(270deg,#FFFFFF,rgba(255,255,255,0));z-index:2;pointer-events:none"></div>
+    <div style="display:flex;gap:60px;width:max-content;align-items:center;animation:aoMarquee 45s linear infinite">
+      <img src="assets/clients/clickfunnels.png" alt="ClickFunnels" style="height:36px;width:auto;display:block">
+      <img src="assets/clients/tuft-needle.png" alt="Tuft &amp; Needle" style="height:26px;width:auto;display:block">
+      <img src="assets/clients/passion-io.png" alt="Passion.io" style="height:34px;width:auto;display:block">
+      <img src="assets/clients/groovefunnels.png" alt="GrooveFunnels" style="height:36px;width:auto;display:block">
+      <img src="assets/clients/proctor-gallagher.png" alt="Proctor Gallagher Institute" style="height:26px;width:auto;display:block">
+      <img src="assets/clients/invest-diva.png" alt="Invest Diva" style="height:28px;width:auto;display:block">
+      <img src="assets/clients/us-metal-roofing.png" alt="U.S. Metal Roofing Consortium" style="height:56px;width:auto;display:block">
+      <img src="assets/clients/xero-shoes.png" alt="Xero Shoes" style="height:44px;width:auto;display:block">
+      <img src="assets/clients/closers-io.png" alt="Closers.io" style="height:26px;width:auto;display:block">
+      <img src="assets/clients/piano-pictures.png" alt="Piano by Pictures" style="height:48px;width:auto;display:block">
+      <img src="assets/clients/covideo.png" alt="Covideo" style="height:32px;width:auto;display:block">
+      <img src="assets/clients/bodylastics.png" alt="Bodylastics" style="height:28px;width:auto;display:block">
+      <img src="assets/clients/warrior-babe.png" alt="Warrior Babe" style="height:34px;width:auto;display:block">
+      <img src="assets/clients/e-releases.png" alt="eReleases" style="height:36px;width:auto;display:block">
+      <img src="assets/clients/lendi.png" alt="Lendi" style="height:32px;width:auto;display:block">
+      <img src="assets/clients/trick-trades.png" alt="Trick Trades" style="height:56px;width:auto;display:block">
+      <img src="assets/clients/traffic-and-funnels.png" alt="Traffic and Funnels" style="height:24px;width:auto;display:block">
+      <img src="assets/clients/alliance-solar.png" alt="Alliance Solar" style="height:50px;width:auto;display:block">
+      <img src="assets/clients/snow.png" alt="Snow" style="height:34px;width:auto;display:block">
+      <img src="assets/clients/skyview-trading.png" alt="Skyview Trading" style="height:44px;width:auto;display:block">
+      <img src="assets/clients/subto.png" alt="SubTo" style="height:30px;width:auto;display:block">
+      <img src="assets/clients/solar-exclusive.png" alt="Solar Exclusive" style="height:26px;width:auto;display:block">
+      <img src="assets/clients/conway-consulting.png" alt="Conway Consulting" style="height:48px;width:auto;display:block">
+      <img src="assets/clients/private-label-masters.png" alt="Private Label Masters" style="height:58px;width:auto;display:block">
+      <img src="assets/clients/clickfunnels.png" alt="ClickFunnels" style="height:36px;width:auto;display:block">
+      <img src="assets/clients/tuft-needle.png" alt="Tuft &amp; Needle" style="height:26px;width:auto;display:block">
+      <img src="assets/clients/passion-io.png" alt="Passion.io" style="height:34px;width:auto;display:block">
+      <img src="assets/clients/groovefunnels.png" alt="GrooveFunnels" style="height:36px;width:auto;display:block">
+      <img src="assets/clients/proctor-gallagher.png" alt="Proctor Gallagher Institute" style="height:26px;width:auto;display:block">
+      <img src="assets/clients/invest-diva.png" alt="Invest Diva" style="height:28px;width:auto;display:block">
+      <img src="assets/clients/us-metal-roofing.png" alt="U.S. Metal Roofing Consortium" style="height:56px;width:auto;display:block">
+      <img src="assets/clients/xero-shoes.png" alt="Xero Shoes" style="height:44px;width:auto;display:block">
+      <img src="assets/clients/closers-io.png" alt="Closers.io" style="height:26px;width:auto;display:block">
+      <img src="assets/clients/piano-pictures.png" alt="Piano by Pictures" style="height:48px;width:auto;display:block">
+      <img src="assets/clients/covideo.png" alt="Covideo" style="height:32px;width:auto;display:block">
+      <img src="assets/clients/bodylastics.png" alt="Bodylastics" style="height:28px;width:auto;display:block">
+      <img src="assets/clients/warrior-babe.png" alt="Warrior Babe" style="height:34px;width:auto;display:block">
+      <img src="assets/clients/e-releases.png" alt="eReleases" style="height:36px;width:auto;display:block">
+      <img src="assets/clients/lendi.png" alt="Lendi" style="height:32px;width:auto;display:block">
+      <img src="assets/clients/trick-trades.png" alt="Trick Trades" style="height:56px;width:auto;display:block">
+      <img src="assets/clients/traffic-and-funnels.png" alt="Traffic and Funnels" style="height:24px;width:auto;display:block">
+      <img src="assets/clients/alliance-solar.png" alt="Alliance Solar" style="height:50px;width:auto;display:block">
+      <img src="assets/clients/snow.png" alt="Snow" style="height:34px;width:auto;display:block">
+      <img src="assets/clients/skyview-trading.png" alt="Skyview Trading" style="height:44px;width:auto;display:block">
+      <img src="assets/clients/subto.png" alt="SubTo" style="height:30px;width:auto;display:block">
+      <img src="assets/clients/solar-exclusive.png" alt="Solar Exclusive" style="height:26px;width:auto;display:block">
+      <img src="assets/clients/conway-consulting.png" alt="Conway Consulting" style="height:48px;width:auto;display:block">
+      <img src="assets/clients/private-label-masters.png" alt="Private Label Masters" style="height:58px;width:auto;display:block">
+    </div>
+  </div>
+</div>
+
+<!-- ============ THE TWO OLD WAYS ============ -->
+<div data-screen-label="Two Old Ways" style="background:#FFFFFF;padding:96px 0 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div data-reveal="up" style="text-align:center;max-width:780px;margin:0 auto">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2FBD1C">The Old Way</div>
+      <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(30px,3.4vw,46px);font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#0F2A44;margin:14px 0 0;text-wrap:balance">Most Businesses Think There Are Only <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Two Ways</span> to Run Paid Ads</h2>
+      <p style="font-size:17px;line-height:1.6;color:#334061;margin:18px auto 0;max-width:640px">Both get you halfway there. Both leave money on the table.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:48px">
+      <div data-reveal="up" style="border:1px solid rgba(10,31,60,0.08);border-radius:20px;padding:32px;background:#F7F8FB">
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7693">Option 1</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-size:22px;font-weight:700;color:#0F2A44;margin:10px 0 18px">Hire a Done-For-You Agency</h3>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(73,222,50,0.15);color:#1F9A10;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.5;color:#334061">Ads set up correctly from day one</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(73,222,50,0.15);color:#1F9A10;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.5;color:#334061">Results right off the bat</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(255,90,60,0.12);color:#E04525;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:2px">✕</span><span style="font-size:15px;line-height:1.5;color:#334061"><strong>Long-term retainers</strong> that never end</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(255,90,60,0.12);color:#E04525;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:2px">✕</span><span style="font-size:15px;line-height:1.5;color:#334061">The skill <strong>never lives inside your business</strong></span></div>
+        </div>
+      </div>
+      <div data-reveal="up" style="border:1px solid rgba(10,31,60,0.08);border-radius:20px;padding:32px;background:#F7F8FB">
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7693">Option 2</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-size:22px;font-weight:700;color:#0F2A44;margin:10px 0 18px">Buy a Course or Group Coaching</h3>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(73,222,50,0.15);color:#1F9A10;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.5;color:#334061">You (or your team) learn the skill long-term</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(73,222,50,0.15);color:#1F9A10;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:2px">✓</span><span style="font-size:15px;line-height:1.5;color:#334061">No agency fees eating your margin</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(255,90,60,0.12);color:#E04525;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:2px">✕</span><span style="font-size:15px;line-height:1.5;color:#334061"><strong>Nothing is set up correctly</strong> from day one</span></div>
+          <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:20px;height:20px;border-radius:50%;background:rgba(255,90,60,0.12);color:#E04525;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:2px">✕</span><span style="font-size:15px;line-height:1.5;color:#334061">A <strong>big learning curve</strong> before you see results</span></div>
+        </div>
+      </div>
+    </div>
+    <div data-reveal="zoom" style="text-align:center;margin:44px 0 0">
+      <div style="font-family:'Caveat',cursive;font-size:30px;font-weight:700;color:#00A7B2;transform:rotate(-1.5deg)">So there must be a better way…</div>
+      <div style="font-size:22px;color:#9AA4B8;margin-top:6px">↓</div>
+    </div>
+  </div>
+
+  <!-- Option 3 bridge card -->
+  <div style="max-width:1040px;margin:28px auto 0;padding:0 24px 96px">
+    <div data-reveal="zoom" style="padding:3px;border-radius:24px;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);box-shadow:0 20px 60px rgba(10,31,60,0.18)">
+      <div style="border-radius:21px;background:#0A1F3C;padding:44px 48px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-60px;right:-60px;width:240px;height:240px;background:linear-gradient(135deg, rgba(127,232,92,0.16), rgba(0,194,214,0.16));clip-path:polygon(10% 15%, 100% 0%, 60% 95%)"></div>
+        <div style="position:relative;display:grid;grid-template-columns:56px 1fr;gap:24px;align-items:flex-start">
+          <div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(73,222,50,0.35)">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#0A1F3C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path></svg>
+          </div>
+          <div>
+            <div style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7FE85C">Option 3 - The Better Way</div>
+            <h3 style="font-family:'Poppins',sans-serif;font-size:clamp(24px,2.4vw,32px);font-weight:800;line-height:1.2;color:#FFFFFF;margin:10px 0 12px;text-wrap:balance">The AdOutreach Launchpad: A Done-For-You Launch <em style="font-style:normal;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Plus</em> the Keys to Run It</h3>
+            <p style="font-size:16.5px;line-height:1.6;color:rgba(255,255,255,0.78);margin:0;max-width:700px">Your ads launched done-for-you - <strong style="color:#FFFFFF">set up correctly from day one</strong> by the same media buyers behind our full-service agency. Then we <strong style="color:#FFFFFF">hand you the keys</strong> and train you (or someone on your team) to run them long-term, while consulting you on organic content &amp; overall marketing strategy. The best of both worlds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PLATFORMS ============ -->
+<div data-screen-label="Platforms" style="background:#F7F8FB;border-top:1px solid rgba(10,31,60,0.08);border-bottom:1px solid rgba(10,31,60,0.08);padding:72px 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;text-align:center">
+    <div data-reveal="up" style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2FBD1C">Not Just One Platform</div>
+    <h2 data-reveal="up" style="font-family:'Poppins',sans-serif;font-size:clamp(26px,2.8vw,38px);font-weight:800;letter-spacing:-0.02em;color:#0F2A44;margin:14px 0 0;text-wrap:balance">One System. Every Platform That Matters.</h2>
+    <p data-reveal="up" style="font-size:16.5px;line-height:1.6;color:#334061;max-width:620px;margin:14px auto 0">Most programs stop at Meta. Your game plan maps the mix that actually fits your business &amp; goals:</p>
+    <div data-reveal="up" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px">
+      <span style="display:inline-flex;align-items:center;gap:8px;background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:9999px;padding:12px 22px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:#0F2A44;box-shadow:0 1px 3px rgba(10,31,60,0.08)">▶ YouTube Ads <span style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:#1F9A10;background:rgba(73,222,50,0.14);border-radius:9999px;padding:3px 9px">OUR SPECIALTY · 10 YRS</span></span>
+      <span style="display:inline-flex;align-items:center;background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:9999px;padding:12px 22px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:#0F2A44;box-shadow:0 1px 3px rgba(10,31,60,0.08)">Meta - Facebook &amp; Instagram</span>
+      <span style="display:inline-flex;align-items:center;background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:9999px;padding:12px 22px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:#0F2A44;box-shadow:0 1px 3px rgba(10,31,60,0.08)">Google Search</span>
+      <span style="display:inline-flex;align-items:center;background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:9999px;padding:12px 22px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:#0F2A44;box-shadow:0 1px 3px rgba(10,31,60,0.08)">LinkedIn Ads</span>
+      <span style="display:inline-flex;align-items:center;background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:9999px;padding:12px 22px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:#0F2A44;box-shadow:0 1px 3px rgba(10,31,60,0.08)">TikTok Ads</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:9999px;padding:12px 22px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;color:#0F2A44;box-shadow:0 1px 3px rgba(10,31,60,0.08)">ChatGPT Ads <span style="font-size:11px;font-weight:700;letter-spacing:0.06em;color:#8A6100;background:rgba(255,201,60,0.25);border-radius:9999px;padding:3px 9px">NEW</span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROCESS ============ -->
+<div data-screen-label="Process" id="process" style="position:relative;overflow:hidden;background:linear-gradient(180deg, #0A1F3C 0%, #08182E 100%);padding:96px 0">
+  <div style="position:absolute;top:-100px;left:-120px;width:360px;height:360px;background:linear-gradient(135deg, rgba(127,232,92,0.10), rgba(0,194,214,0.10));clip-path:polygon(10% 15%, 100% 0%, 60% 95%);pointer-events:none"></div>
+  <div style="position:relative;max-width:1080px;margin:0 auto;padding:0 24px">
+    <div data-reveal="up" style="text-align:center;max-width:760px;margin:0 auto 56px">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#49DE32">How It Works</div>
+      <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(30px,3.4vw,46px);font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#FFFFFF;margin:14px 0 0;text-wrap:balance">The Launchpad Process: <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Four Steps to Liftoff</span></h2>
+      <p style="font-size:17px;line-height:1.6;color:rgba(255,255,255,0.72);margin:16px auto 0;max-width:620px">Refined over a decade &amp; 3,000+ businesses, distilled down to the core elements.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:0">
+      <div data-reveal="up" style="display:grid;grid-template-columns:76px 1fr;gap:28px">
+        <div style="display:flex;flex-direction:column;align-items:center">
+          <div style="flex:none;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:#0A1F3C;box-shadow:0 0 30px rgba(73,222,50,0.3)">1</div>
+          <div style="width:2px;flex:1;background:linear-gradient(180deg, rgba(73,222,50,0.5), rgba(0,194,214,0.2))"></div>
+        </div>
+        <div style="padding-bottom:40px">
+          <div style="border:1px solid rgba(255,255,255,0.1);border-radius:20px;background:rgba(255,255,255,0.04);padding:30px 34px">
+            <div style="font-size:11.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7FE85C">Step 1</div>
+            <h3 style="font-family:'Poppins',sans-serif;font-size:23px;font-weight:700;color:#FFFFFF;margin:8px 0 14px">Video Marketing Game Plan &amp; Strategy</h3>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)"><strong style="color:#FFFFFF">Audit your existing marketing</strong> - what's working, what's not</span></div>
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)">Meet <strong style="color:#FFFFFF">1-on-1 to map a custom game plan</strong> &amp; roadmap</span></div>
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)">Covering your <strong style="color:#FFFFFF">ads, organic content &amp; funnels</strong></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="up" style="display:grid;grid-template-columns:76px 1fr;gap:28px">
+        <div style="display:flex;flex-direction:column;align-items:center">
+          <div style="flex:none;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:#0A1F3C;box-shadow:0 0 30px rgba(73,222,50,0.3)">2</div>
+          <div style="width:2px;flex:1;background:linear-gradient(180deg, rgba(73,222,50,0.5), rgba(0,194,214,0.2))"></div>
+        </div>
+        <div style="padding-bottom:40px">
+          <div style="border:1px solid rgba(255,255,255,0.1);border-radius:20px;background:rgba(255,255,255,0.04);padding:30px 34px">
+            <div style="font-size:11.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7FE85C">Step 2</div>
+            <h3 style="font-family:'Poppins',sans-serif;font-size:23px;font-weight:700;color:#FFFFFF;margin:8px 0 14px">Video Ad Scripting &amp; Content Roadmap</h3>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)">We <strong style="color:#FFFFFF">write your ad scripts for you</strong> - the proven Hook → Educate → Call-to-Action formula</span></div>
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)"><strong style="color:#FFFFFF">90-day organic content roadmap</strong> (optional - but it amplifies your ads)</span></div>
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)">Our <strong style="color:#FFFFFF">"copy &amp; paste" funnel templates</strong> to capture &amp; convert leads</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="up" style="display:grid;grid-template-columns:76px 1fr;gap:28px">
+        <div style="display:flex;flex-direction:column;align-items:center">
+          <div style="flex:none;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:#0A1F3C;box-shadow:0 0 30px rgba(73,222,50,0.3)">3</div>
+          <div style="width:2px;flex:1;background:linear-gradient(180deg, rgba(73,222,50,0.5), rgba(0,194,214,0.2))"></div>
+        </div>
+        <div style="padding-bottom:40px">
+          <div style="border:1px solid rgba(73,222,50,0.35);border-radius:20px;background:rgba(73,222,50,0.06);padding:30px 34px;position:relative">
+            <div style="position:absolute;top:-13px;right:24px;background:linear-gradient(135deg, #7FE85C, #00C2D6);color:#0A1F3C;font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;border-radius:9999px;padding:5px 14px">The Part No Course Gives You</div>
+            <div style="font-size:11.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7FE85C">Step 3</div>
+            <h3 style="font-family:'Poppins',sans-serif;font-size:23px;font-weight:700;color:#FFFFFF;margin:8px 0 14px">Done-For-You Ads Setup &amp; Launch</h3>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)">Our <strong style="color:#FFFFFF">media buyers fully set up your ads</strong> - conversions tracked, deep audience research done</span></div>
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)">Launched together on a <strong style="color:#FFFFFF">1-on-1 ads launch call</strong> - we hand you the keys</span></div>
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)"><strong style="color:#FFFFFF">YouTube &amp; Meta</strong> - plus Google Search, LinkedIn, TikTok or ChatGPT ads where they fit</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="up" style="display:grid;grid-template-columns:76px 1fr;gap:28px">
+        <div style="display:flex;flex-direction:column;align-items:center">
+          <div style="flex:none;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:#0A1F3C;box-shadow:0 0 30px rgba(73,222,50,0.3)">4</div>
+        </div>
+        <div>
+          <div style="border:1px solid rgba(255,255,255,0.1);border-radius:20px;background:rgba(255,255,255,0.04);padding:30px 34px">
+            <div style="font-size:11.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7FE85C">Step 4</div>
+            <h3 style="font-family:'Poppins',sans-serif;font-size:23px;font-weight:700;color:#FFFFFF;margin:8px 0 14px">Teach You How to Optimize &amp; Scale</h3>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)"><strong style="color:#FFFFFF">6 months of priority access</strong> to the Video Authority Membership</span></div>
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)"><strong style="color:#FFFFFF">Daily clinic calls</strong> - 1-on-1 support in a group setting</span></div>
+              <div style="display:flex;gap:10px;align-items:flex-start"><span style="flex:none;color:#49DE32;font-weight:800;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.55;color:rgba(255,255,255,0.78)">Ads, scaling, <strong style="color:#FFFFFF">organic content, funnels &amp; more</strong> - you attend, or your team does</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-reveal="zoom" style="margin-top:48px;border-radius:20px;background:linear-gradient(135deg, rgba(127,232,92,0.12), rgba(0,194,214,0.12));border:1px solid rgba(127,232,92,0.25);padding:30px 36px;display:flex;gap:22px;align-items:center;flex-wrap:wrap">
+      <div style="flex:none;width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);display:flex;align-items:center;justify-content:center">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0A1F3C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path></svg>
+      </div>
+      <div style="flex:1;min-width:280px">
+        <div style="font-family:'Poppins',sans-serif;font-size:19px;font-weight:700;color:#FFFFFF">Daily Clinics Give You Access &amp; Speed to Results</div>
+        <div style="font-size:15px;line-height:1.55;color:rgba(255,255,255,0.72);margin-top:4px">Focus on what <em>you</em> need &amp; leverage the clinics that work best for you - every single day, for six months.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ COMPARISON ============ -->
+<div data-screen-label="Comparison" style="background:#FFFFFF;padding:96px 0">
+  <div style="max-width:1080px;margin:0 auto;padding:0 24px">
+    <div data-reveal="up" style="text-align:center;max-width:760px;margin:0 auto 52px">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2FBD1C">Why Launchpad Is Different</div>
+      <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(30px,3.4vw,46px);font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#0F2A44;margin:14px 0 0;text-wrap:balance">Most Programs Make You Choose. <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Launchpad Doesn't.</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;align-items:stretch">
+      <div data-reveal="left" style="border:1px solid rgba(10,31,60,0.08);border-radius:20px;padding:36px;background:#F7F8FB">
+        <div style="font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:#6B7693;margin-bottom:22px">Most Consulting Programs &amp; Offers…</div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(255,90,60,0.12);color:#E04525;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:1px">✕</span><span style="font-size:15.5px;line-height:1.5;color:#4B5876">Two generic "support" calls per week</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(255,90,60,0.12);color:#E04525;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:1px">✕</span><span style="font-size:15.5px;line-height:1.5;color:#4B5876">Focus on only one platform (usually Meta)</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(255,90,60,0.12);color:#E04525;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:1px">✕</span><span style="font-size:15.5px;line-height:1.5;color:#4B5876">No done-for-you ads launch</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(255,90,60,0.12);color:#E04525;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:1px">✕</span><span style="font-size:15.5px;line-height:1.5;color:#4B5876">Only 2-3 months of support</span></div>
+        </div>
+      </div>
+      <div data-reveal="right" style="position:relative;border-radius:20px;padding:36px;background:#0A1F3C;border:1px solid rgba(73,222,50,0.4);box-shadow:0 0 40px rgba(73,222,50,0.18), 0 20px 60px rgba(10,31,60,0.25)">
+        <div style="position:absolute;top:-14px;left:32px;background:linear-gradient(135deg, #7FE85C, #00C2D6);color:#0A1F3C;font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;border-radius:9999px;padding:6px 14px">The Launchpad Way</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:22px">
+          <div style="display:inline-flex;background:#FFFFFF;border-radius:6px;padding:5px 9px"><img src="assets/adoutreach-logo-full.png" alt="AdOutreach" style="height:17px;display:block"></div>
+          <span style="font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:#FFFFFF">Launchpad</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(73,222,50,0.2);color:#7FE85C;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.5;color:rgba(255,255,255,0.85)"><strong style="color:#FFFFFF">Daily support clinics</strong> every week</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(73,222,50,0.2);color:#7FE85C;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.5;color:rgba(255,255,255,0.85)"><strong style="color:#FFFFFF">YouTube + Meta + organic</strong> &amp; omnipresence strategies</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(73,222,50,0.2);color:#7FE85C;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.5;color:rgba(255,255,255,0.85)"><strong style="color:#FFFFFF">Full done-for-you ads launch</strong> - set up correctly from day one</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="flex:none;display:inline-flex;width:22px;height:22px;border-radius:50%;background:rgba(73,222,50,0.2);color:#7FE85C;font-size:12px;font-weight:800;align-items:center;justify-content:center;margin-top:1px">✓</span><span style="font-size:15.5px;line-height:1.5;color:rgba(255,255,255,0.85)"><strong style="color:#FFFFFF">6 months of daily support</strong> - every step of the way</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROOF ============ -->
+<div data-screen-label="Proof and Results" style="background:#F7F8FB;border-top:1px solid rgba(10,31,60,0.08);padding:96px 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div data-reveal="up" style="text-align:center;max-width:820px;margin:0 auto 52px">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2FBD1C">We Practice What We Preach</div>
+      <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(30px,3.4vw,46px);font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#0F2A44;margin:14px 0 0;text-wrap:balance">The Same System We Used to Scale <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">AdOutreach to 8 Figures</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:28px;align-items:stretch">
+      <div data-reveal="left" style="background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(10,31,60,0.10);display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:8px;background:#EEF1F6;border-bottom:1px solid rgba(10,31,60,0.08);padding:12px 16px">
+          <span style="width:10px;height:10px;border-radius:50%;background:#FF5A3C;display:inline-block"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#FFC93C;display:inline-block"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#49DE32;display:inline-block"></span>
+          <span style="font-size:12px;color:#6B7693;margin-left:10px;font-weight:600">ads.google.com - AdOutreach account</span>
+        </div>
+        <div style="position:relative;flex:1;min-height:300px"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ads-dashboard" shape="rect" fit="contain" src="uploads/2026-07-03_15-19-20.png" placeholder="Drop the real ads-dashboard screenshot ($7.7M lifetime spend)" style="position:absolute;top:0;left:0;width:100%;height:100%" hint-size="100%,300px"></x-import></div>
+        <div style="padding:16px 20px;border-top:1px solid rgba(10,31,60,0.08)">
+          <span style="font-size:14px;color:#334061"><strong style="color:#0F2A44">$7.7M+ of our own money</strong> spent on paid video ads - this is our actual dashboard, not a client's.</span>
+        </div>
+      </div>
+      <div data-reveal="right" style="display:flex;flex-direction:column;gap:28px">
+        <div style="background:#0A1F3C;border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:16px"><span style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">3,000+</span><span style="font-size:13.5px;color:rgba(255,255,255,0.68);text-align:right">businesses implemented</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:16px"><span style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">9-Figure</span><span style="font-size:13.5px;color:rgba(255,255,255,0.68);text-align:right">collective client revenue</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">10+ Yrs</span><span style="font-size:13.5px;color:rgba(255,255,255,0.68);text-align:right">AdOutreach just turned ten</span></div>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:20px;padding:26px 32px;display:flex;align-items:center;gap:20px;box-shadow:0 1px 3px rgba(10,31,60,0.08)">
+          <div style="flex:none;width:64px;height:64px;border-radius:50%;border:2.5px solid #0F2A44;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Poppins',sans-serif">
+            <span style="font-size:9px;font-weight:800;letter-spacing:0.06em;color:#0F2A44">INC.</span>
+            <span style="font-size:13px;font-weight:800;color:#0F2A44;line-height:1">5000</span>
+            <span style="font-size:8.5px;font-weight:700;color:#E04525">#60</span>
+          </div>
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;color:#0F2A44">#60 Fastest-Growing Company in America</div>
+            <div style="font-size:13.5px;color:#6B7693;margin-top:2px">Inc. 5000 honoree - three years in a row</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TESTIMONIALS ============ -->
+<div data-screen-label="Testimonials" style="background:#F7F8FB;padding:0 0 96px">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div data-reveal="up" style="text-align:center;max-width:780px;margin:0 auto 48px">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2FBD1C">Thousands of Success Stories</div>
+      <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(28px,3vw,42px);font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#0F2A44;margin:14px 0 0;text-wrap:balance">Dozens of Video Testimonials. Here Are Just <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">A Few.</span></h2>
+    </div>
+    <div data-reveal="zoom" style="max-width:880px;margin:0 auto 20px">
+      <div style="position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(10,31,60,0.10);box-shadow:0 20px 60px rgba(10,31,60,0.18);background:#000000">
+        <iframe src="https://www.youtube-nocookie.com/embed/uJRw4kLJmkg?rel=0&amp;playsinline=1" referrerPolicy="strict-origin-when-cross-origin" title="AdOutreach Success Stories - Testimonial Super Cut" style="display:block;width:100%;aspect-ratio:16/9;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen="{{ true }}"></iframe>
+      </div>
+      <div style="margin-top:16px;text-align:center;font-size:15px;line-height:1.6;color:#334061;max-width:720px;margin-left:auto;margin-right:auto"><strong style="color:#0F2A44">Start with the super cut</strong> - a variety of client testimonials in one video: coaches, consultants, course creators &amp; business owners sharing their results with AdOutreach, back to back.</div>
+    </div>
+    <div data-reveal="up" style="text-align:center;font-size:12.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#6B7693;margin:36px 0 20px">Then Dive Into Individual Stories</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:22px">
+      <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="6">
+        <div data-reveal="up" style="background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:20px;overflow:hidden;box-shadow:0 1px 3px rgba(10,31,60,0.08);transition:transform 200ms cubic-bezier(0.22,1,0.36,1), box-shadow 200ms" style-hover="transform:translateY(-2px);box-shadow:0 8px 24px rgba(10,31,60,0.10)">
+          <div style="position:relative;width:100%;aspect-ratio:16/9;background:radial-gradient(420px 220px at 78% -20%, rgba(0,194,214,0.35), transparent 65%), radial-gradient(360px 200px at 8% 110%, rgba(73,222,50,0.22), transparent 60%), linear-gradient(135deg, #0D254A 0%, #0A1F3C 100%)">
+            <sc-if value="{{ t.playing }}" hint-placeholder-val="{{ false }}">
+              <iframe src="{{ t.embedUrl }}" title="{{ t.name }}" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen="{{ true }}"></iframe>
+            </sc-if>
+            <sc-if value="{{ t.idle }}" hint-placeholder-val="{{ true }}">
+              <div style="{{ t.thumbStyle }}"></div>
+              <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg, rgba(10,31,60,0.15) 0%, rgba(10,31,60,0.35) 55%, rgba(10,31,60,0.88) 100%);pointer-events:none"></div>
+              <button onClick="{{ t.play }}" title="Play video testimonial" style="position:absolute;top:0;left:0;width:100%;height:100%;background:transparent;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0">
+                <span style="display:inline-flex;width:54px;height:54px;border-radius:50%;background:rgba(10,31,60,0.55);border:2px solid rgba(255,255,255,0.9);color:#FFFFFF;font-size:17px;align-items:center;justify-content:center;padding-left:5px">▶</span>
+              </button>
+              <div style="position:absolute;left:16px;right:16px;bottom:13px;pointer-events:none;display:flex;flex-direction:column;gap:3px;text-align:left">
+                <span style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:#FFFFFF;line-height:1.3">{{ t.title }}</span>
+                <span style="font-size:10.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.65)">▶ Watch the Story</span>
+              </div>
+              <div style="position:absolute;top:12px;left:12px;background:linear-gradient(135deg, #7FE85C, #00C2D6);color:#0A1F3C;font-family:'Poppins',sans-serif;font-size:12px;font-weight:800;border-radius:9999px;padding:5px 12px;pointer-events:none">{{ t.kpi }}</div>
+            </sc-if>
+          </div>
+          <div style="padding:20px 22px">
+            <div style="color:#FFC93C;font-size:14px;letter-spacing:2px">★★★★★</div>
+            <p style="font-size:14px;line-height:1.55;color:#334061;margin:10px 0 14px">{{ t.quote }}</p>
+            <div style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:#0F2A44">{{ t.name }}</div>
+            <div style="font-size:12.5px;color:#6B7693">{{ t.role }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <!-- Trustpilot strip -->
+    <div data-reveal="up" style="margin-top:32px;background:#FFFFFF;border:1px solid rgba(10,31,60,0.08);border-radius:16px;padding:22px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px;box-shadow:0 1px 3px rgba(10,31,60,0.08)">
+      <span style="font-family:'Poppins',sans-serif;font-size:17px;font-weight:700;color:#0F2A44;display:inline-flex;align-items:center;gap:8px"><span style="color:#00B67A;font-size:19px">★</span> Trustpilot</span>
+      <span style="display:inline-flex;gap:3px">
+        <span style="display:inline-flex;width:26px;height:26px;background:#00B67A;color:#FFFFFF;align-items:center;justify-content:center;font-size:14px">★</span>
+        <span style="display:inline-flex;width:26px;height:26px;background:#00B67A;color:#FFFFFF;align-items:center;justify-content:center;font-size:14px">★</span>
+        <span style="display:inline-flex;width:26px;height:26px;background:#00B67A;color:#FFFFFF;align-items:center;justify-content:center;font-size:14px">★</span>
+        <span style="display:inline-flex;width:26px;height:26px;background:#00B67A;color:#FFFFFF;align-items:center;justify-content:center;font-size:14px">★</span>
+        <span style="display:inline-flex;width:26px;height:26px;background:#00B67A;color:#FFFFFF;align-items:center;justify-content:center;font-size:14px">★</span>
+      </span>
+      <span style="font-size:15px;color:#334061"><strong style="color:#0F2A44">Hundreds of verified 5-star reviews</strong> - rated Excellent on Trustpilot</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ALERIC ============ -->
+<div data-screen-label="About Aleric" style="background:#FFFFFF;padding:96px 0">
+  <div style="max-width:1160px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:64px;align-items:center">
+    <div data-reveal="left" style="position:relative">
+      <div style="position:absolute;top:-34px;left:-34px;width:170px;height:170px;background:linear-gradient(135deg, #7FE85C, #00C2D6);opacity:0.25;clip-path:polygon(10% 15%, 100% 0%, 60% 95%)"></div>
+      <div style="position:absolute;bottom:-30px;right:-26px;width:140px;height:140px;background:linear-gradient(135deg, #49DE32, #00A7B2);opacity:0.2;clip-path:polygon(0% 25%, 100% 10%, 50% 100%)"></div>
+      <div style="position:relative;width:100%;aspect-ratio:4/5;border-radius:24px;box-shadow:0 20px 60px rgba(10,31,60,0.18)"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="aleric-portrait" shape="rounded" radius="24" src="uploads/Headshot_Aleric.JPG" placeholder="Aleric portrait - warm studio shot" style="position:absolute;top:0;left:0;width:100%;height:100%" hint-size="100%,520px"></x-import></div>
+      <div style="position:absolute;right:-18px;bottom:38px;display:flex;flex-direction:column;align-items:center;background:#0A1F3C;border-radius:16px;padding:16px 20px;box-shadow:0 20px 60px rgba(10,31,60,0.35)">
+        <span style="font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">500k+</span>
+        <span style="font-size:11.5px;color:rgba(255,255,255,0.66)">YouTube subscribers built</span>
+      </div>
+    </div>
+    <div data-reveal="right">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2FBD1C">Your Guide</div>
+      <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(30px,3.2vw,44px);font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#0F2A44;margin:14px 0 0">Meet <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Aleric Heck</span></h2>
+      <p style="font-size:16.5px;line-height:1.65;color:#334061;margin:18px 0 0">Founder &amp; CEO of AdOutreach. Aleric built his first channel, AppFind, to <strong>500k+ subscribers</strong> before pioneering the value-driven YouTube Ads strategies AdOutreach is known for - and has personally spent <strong>$7.7M+ of his own money</strong> on paid video ads.</p>
+      <p style="font-size:16.5px;line-height:1.65;color:#334061;margin:14px 0 0">He's the author of the Amazon best-seller <strong><em>Video Authority: The Art &amp; Science of Converting Viewers Into Clients</em></strong> - because views don't pay the bills. <strong>Viewers becoming clients</strong> is the whole game, with organic video and with your ads.</p>
+      <div style="display:flex;align-items:center;gap:24px;margin-top:28px;flex-wrap:wrap">
+        <div style="flex:none;width:150px;perspective:900px">
+          <div style="position:relative;transform:rotateY(-16deg) rotateZ(-1deg);transform-style:preserve-3d;filter:drop-shadow(-16px 22px 22px rgba(10,31,60,0.35))">
+            <div style="position:absolute;top:3px;bottom:3px;right:-8px;width:8px;background:linear-gradient(90deg, #E9E9E3 0%, #FFFFFF 35%, #F2F2EC 60%, #D8D8D0 100%);border-radius:0 2px 2px 0"></div>
+            <div style="position:relative;width:100%;aspect-ratio:2/3;border-radius:3px 8px 8px 3px;overflow:hidden">
+              <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="book-cover" shape="rect" src="uploads/51VVp9Em2qL._SL1500_.jpg" placeholder="Book cover" style="position:absolute;top:0;left:0;width:100%;height:100%" hint-size="150px,225px"></x-import>
+              <div style="position:absolute;top:0;bottom:0;left:0;width:12px;background:linear-gradient(90deg, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0) 100%);pointer-events:none"></div>
+              <div style="position:absolute;top:0;bottom:0;right:0;width:6px;background:linear-gradient(270deg, rgba(0,0,0,0.22), rgba(0,0,0,0));pointer-events:none"></div>
+            </div>
+          </div>
+        </div>
+        <div style="flex:1;min-width:220px">
+          <div style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#6B7693">Amazon Best-Seller</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:#0F2A44;margin-top:6px">Video Authority</div>
+          <div style="font-size:14px;line-height:1.55;color:#334061;margin-top:4px">The art &amp; science of converting viewers into clients - the strategy behind every Launchpad game plan.</div>
+        </div>
+      </div>
+      <div style="font-family:'Caveat',cursive;font-size:34px;font-weight:700;margin-top:26px;background:linear-gradient(135deg, #49DE32 0%, #00A7B2 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;transform:rotate(-2deg);display:inline-block">- Aleric</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FAQ ============ -->
+<div data-screen-label="FAQ" style="background:#F7F8FB;border-top:1px solid rgba(10,31,60,0.08);padding:96px 0">
+  <div style="max-width:860px;margin:0 auto;padding:0 24px">
+    <div data-reveal="up" style="text-align:center;margin-bottom:44px">
+      <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#2FBD1C">Questions, Answered</div>
+      <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(28px,3vw,42px);font-weight:800;letter-spacing:-0.02em;color:#0F2A44;margin:14px 0 0">Frequently Asked Questions</h2>
+    </div>
+    <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="7">
+      <div data-reveal="up" style="border:1px solid rgba(10,31,60,0.08);border-radius:12px;background:#FFFFFF;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 2px rgba(10,31,60,0.06)">
+        <button onClick="{{ faq.toggle }}" style="display:flex;width:100%;align-items:center;justify-content:space-between;gap:16px;background:transparent;border:0;cursor:pointer;text-align:left;padding:20px 24px;font-family:'Poppins',sans-serif;font-size:16.5px;font-weight:600;color:#0F2A44">
+          <span>{{ faq.q }}</span>
+          <span style="{{ faq.chevStyle }}">▾</span>
+        </button>
+        <div style="{{ faq.bodyStyle }}">
+          <div style="padding:0 24px 22px;font-size:15.5px;line-height:1.65;color:#334061;max-width:760px">{{ faq.a }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+
+<!-- ============ FINAL CTA ============ -->
+<div data-screen-label="Final CTA" style="position:relative;overflow:hidden;background:radial-gradient(900px 500px at 50% -20%, rgba(0,194,214,0.28), transparent 65%), radial-gradient(700px 400px at 15% 80%, rgba(73,222,50,0.14), transparent 60%), linear-gradient(180deg, #0A1F3C 0%, #060F22 100%);padding:110px 0">
+  <div style="position:absolute;top:-80px;right:-100px;width:320px;height:320px;background:linear-gradient(135deg, rgba(127,232,92,0.12), rgba(0,194,214,0.12));clip-path:polygon(10% 15%, 100% 0%, 60% 95%);pointer-events:none"></div>
+  <div data-reveal="zoom" style="position:relative;max-width:900px;margin:0 auto;padding:0 24px;text-align:center">
+    <div style="font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#49DE32">Spots Are Limited</div>
+    <h2 style="font-family:'Poppins',sans-serif;font-size:clamp(32px,4vw,54px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;color:#FFFFFF;margin:16px 0 0;text-wrap:balance">Ready to Launch Your Ads &amp; Take Them <span style="background:linear-gradient(135deg, #7FE85C 0%, #49DE32 35%, #00A7B2 75%, #00C2D6 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">to the Stars?</span></h2>
+    <p style="font-size:17.5px;line-height:1.6;color:rgba(255,255,255,0.78);max-width:640px;margin:20px auto 0">Apply now to map out your custom game plan with our team - where you're at, where you're going &amp; exactly how Launchpad installs a <strong style="color:#FFFFFF">predictable client acquisition system</strong> inside your business.</p>
+    <div style="margin-top:36px">
+      <a href="https://adoutreach.com/apply" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;font-family:'Poppins',sans-serif;font-size:19px;font-weight:700;letter-spacing:0.02em;color:#FFFFFF;background:#FF5A3C;padding:22px 46px;border-radius:9999px;text-decoration:none;box-shadow:0 8px 24px rgba(255,90,60,0.35), 0 0 40px rgba(255,90,60,0.3);transition:transform 200ms cubic-bezier(0.22,1,0.36,1), background 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#E04525;transform:translateY(-2px)">Apply Now →</a>
+    </div>
+    <div style="font-size:13.5px;color:rgba(255,255,255,0.55);margin-top:16px">Takes 2 minutes · Investment discussed on your call · No long-term agency retainers</div>
+    <sc-if value="{{ agencyNote }}" hint-placeholder-val="{{ true }}">
+      <div style="margin:44px auto 0;max-width:640px;border:1px solid rgba(255,255,255,0.14);border-radius:16px;background:rgba(255,255,255,0.04);padding:20px 28px">
+        <span style="font-size:14.5px;line-height:1.6;color:rgba(255,255,255,0.72)"><strong style="color:#FFFFFF">Prefer fully-managed ads, long-term?</strong> We run a full done-for-you agency too - spots are limited. Apply &amp; tell your advisor you're interested in full management.</span>
+      </div>
+    </sc-if>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div data-screen-label="Footer" style="background:#060F22;padding:44px 0">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:22px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px">
+      <div style="display:inline-flex;background:#FFFFFF;border-radius:8px;padding:7px 12px"><img src="assets/adoutreach-logo-full.png" alt="AdOutreach" style="height:22px;display:block"></div>
+      <div style="display:flex;gap:22px;font-size:13.5px">
+        <a href="https://adoutreach.com/terms-and-conditions/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.6);text-decoration:none;transition:color 200ms" style-hover="color:#7FE85C">Terms</a>
+        <a href="https://adoutreach.com/privacy-policy/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.6);text-decoration:none;transition:color 200ms" style-hover="color:#7FE85C">Privacy</a>
+        <a href="https://adoutreach.com/disclaimer/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.6);text-decoration:none;transition:color 200ms" style-hover="color:#7FE85C">Disclaimer</a>
+        <a href="mailto:hello@adoutreach.com" style="color:rgba(255,255,255,0.6);text-decoration:none;transition:color 200ms" style-hover="color:#7FE85C">Contact</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:20px;display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12.5px;color:rgba(255,255,255,0.45)">© 2026 AdOutreach · Value-Driven Video Marketing · Connect. Captivate. Convert.</span>
+      <span style="font-size:12px;line-height:1.6;color:rgba(255,255,255,0.35)">Testimonials reflect real client experiences. Results are not typical and depend on your business, offer, market &amp; effort. Advertising involves risk - no earnings are guaranteed.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STICKY CTA BAR ============ -->
+<sc-if value="{{ stickyCtaOn }}" hint-placeholder-val="{{ false }}">
+  <div style="{{ stickyWrapStyle }}">
+    <div style="max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+      <div style="display:flex;align-items:center;gap:12px;min-width:0">
+        <span style="flex:none;width:10px;height:10px;border-radius:50%;background:#49DE32;box-shadow:0 0 12px rgba(73,222,50,0.8)"></span>
+        <span style="font-family:'Poppins',sans-serif;font-size:14.5px;font-weight:700;color:#FFFFFF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">The AdOutreach Launchpad - done-for-you launch + 6 months of training</span>
+      </div>
+      <a href="https://adoutreach.com/apply" target="_blank" rel="noopener" style="flex:none;display:inline-flex;align-items:center;gap:8px;font-family:'Poppins',sans-serif;font-size:14.5px;font-weight:700;color:#FFFFFF;background:#FF5A3C;padding:12px 26px;border-radius:9999px;text-decoration:none;box-shadow:0 8px 24px rgba(255,90,60,0.35);transition:transform 200ms cubic-bezier(0.22,1,0.36,1), background 200ms cubic-bezier(0.22,1,0.36,1)" style-hover="background:#E04525;transform:translateY(-1px)">Apply Now →</a>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;heroLayout&quot;: {
+    &quot;editor&quot;: &quot;enum&quot;,
+    &quot;options&quot;: [&quot;Centered - classic VSL&quot;, &quot;Split - copy + video&quot;, &quot;Broadcast - video-first&quot;],
+    &quot;default&quot;: &quot;Centered - classic VSL&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;section&quot;: &quot;Hero&quot;
+  },
+  &quot;stickyCta&quot;: {
+    &quot;editor&quot;: &quot;boolean&quot;,
+    &quot;default&quot;: true,
+    &quot;tsType&quot;: &quot;boolean&quot;,
+    &quot;section&quot;: &quot;Page&quot;
+  },
+  &quot;showAgencyNote&quot;: {
+    &quot;editor&quot;: &quot;boolean&quot;,
+    &quot;default&quot;: true,
+    &quot;tsType&quot;: &quot;boolean&quot;,
+    &quot;section&quot;: &quot;Page&quot;
+  }
+}">
+const FAQS = [
+  {
+    q: "How is Launchpad different from hiring an ads agency?",
+    a: "An agency keeps the keys - and the retainers - forever. With Launchpad, our media buyers set up and launch your ads with the exact same process our done-for-you agency clients get. Then we hand you the keys and spend 6 months training you (or someone on your team) to run them. Agency-quality setup, without the never-ending retainer."
+  },
+  {
+    q: "What if I've never run paid ads before?",
+    a: "That's exactly why the done-for-you launch exists. Nothing depends on you getting the setup right - conversion tracking, audience research and the launch itself are all handled for you, correctly, from day one. From there, daily clinic calls walk you through optimizing and scaling, one step at a time."
+  },
+  {
+    q: "Which ad platforms do you work with?",
+    a: "YouTube Ads and Meta Ads (Facebook & Instagram) are core - and we also launch Google Search, LinkedIn, TikTok and the new ChatGPT ads, which are getting great results right off the bat. Your game plan maps the mix that fits your business and goals."
+  },
+  {
+    q: "Who attends the daily clinics?",
+    a: "You, or anyone on your team. Clinics run every day - 1-on-1 support in a group setting - covering ads, scaling, organic content, funnels and more. You get 6 months of priority access, so you can lean on whichever clinics you need, whenever you need them."
+  },
+  {
+    q: "Is the organic content part required?",
+    a: "No - it's optional. That said, we've found organic content amplifies what you're doing with ads, so your plan includes a 90-day organic content roadmap if you want to use it."
+  },
+  {
+    q: "What if I want my ads fully managed for me, long-term?",
+    a: "We offer full done-for-you agency services as well. Spots are limited - apply below and let your advisor know you're interested in full management."
+  },
+  {
+    q: "What happens after I apply?",
+    a: "You'll book a conversation with our team. We'll look at where you're at, where you're looking to go, and map out a custom game plan for implementing Launchpad in your business. Investment is discussed on the call."
+  }
+];
+
+const TESTIMONIALS = [
+  { id: '564809992', name: 'Cole Gordon', role: 'Sales Training', kpi: '$660k → $3M+/mo', title: 'Scaled to $3M+/Month in Under a Year', quote: '"Our ads became insanely more profitable. I was astounded by how much better YouTube worked than Facebook."' },
+  { id: '371910551', name: 'Ahmad Munawar', role: 'B2B Consulting', kpi: '$100k month', title: 'My First $100k Month', quote: '"I finally hit that $100k month I couldn\'t get with Facebook ads - with Aleric & his team\'s help."' },
+  { id: '462695983', name: 'Lee Blue', role: 'Web Design Coaching', kpi: '10x ROAS', title: '$3k in Ads → $30k in New Clients', quote: '"My calendar is maxed out from the amount of leads! Spent $3,000 in ads and onboarded about $30,000 worth of clients in one month."' },
+  { id: '525212032', name: 'Mei Pak', role: 'Creative Business Coaching', kpi: '$30k → $100k/mo', title: 'From $30k/Month to $100k/Month', quote: '"Went from $30k months to crossing $100k/month - with YouTube Ads driving predictable, scalable traffic."' },
+  { id: '444375759', name: 'Jonathan Kirchner', role: 'Course Creator', kpi: '90 days', title: 'On Pace for a $100k Month', quote: '"Within a month we hit $10,000. Within 90 days, $30-40,000/month. We\'re on pace for a $100,000 month."' },
+  { id: '503203096', name: 'Donna Partow', role: 'Author & Coach', kpi: '$115k / 2 mo', title: '$115,000 in Two Months', quote: '"I recorded a 2-minute video with the high-ticket offer the AdOutreach team helped me create. $115,000 in just two months!"' }
+];
+
+class Component extends DCLogic {
+  state = { scrolled: false, showSticky: false, openFaq: 0, playingVideo: null };
+
+  componentDidMount() {
+    this._onScroll = () => {
+      const y = window.scrollY;
+      const scrolled = y > 40;
+      const showSticky = y > 950;
+      if (scrolled !== this.state.scrolled || showSticky !== this.state.showSticky) {
+        this.setState({ scrolled, showSticky });
+      }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._setupReveals();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    if (this._io) this._io.disconnect();
+  }
+
+  _setupReveals() {
+    if (this._revealsDone) return;
+    this._revealsDone = true;
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || !('IntersectionObserver' in window)) return;
+    const els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    if (!els.length) return;
+    const saved = new Map();
+    els.forEach((el) => {
+      saved.set(el, {
+        transition: el.style.transition,
+        transform: el.style.transform,
+        opacity: el.style.opacity
+      });
+      const kind = el.getAttribute('data-reveal');
+      let hiddenT = 'translateY(28px)';
+      if (kind === 'left') hiddenT = 'translateX(-28px)';
+      else if (kind === 'right') hiddenT = 'translateX(28px)';
+      else if (kind === 'zoom') hiddenT = 'scale(0.955) translateY(14px)';
+      const base = saved.get(el).transform;
+      el.style.opacity = '0';
+      el.style.transform = base ? base + ' ' + hiddenT : hiddenT;
+      el.style.willChange = 'opacity, transform';
+    });
+    const ease = 'cubic-bezier(0.22,1,0.36,1)';
+    const reveal = (el, delay) => {
+      const orig = saved.get(el) || { transition: '', transform: '', opacity: '' };
+      el.style.transition = 'opacity 720ms ' + ease + ' ' + delay + 'ms, transform 720ms ' + ease + ' ' + delay + 'ms';
+      void el.offsetWidth;
+      el.style.opacity = '1';
+      el.style.transform = orig.transform || 'none';
+      window.setTimeout(() => {
+        el.style.transition = orig.transition;
+        el.style.transform = orig.transform;
+        el.style.opacity = orig.opacity;
+        el.style.willChange = '';
+      }, delay + 780);
+    };
+    this._io = new IntersectionObserver((entries) => {
+      const vis = entries.filter((e) => e.isIntersecting);
+      vis.sort((a, b) => ((a.target.compareDocumentPosition(b.target) & 4) ? -1 : 1));
+      vis.forEach((e, i) => {
+        this._io.unobserve(e.target);
+        reveal(e.target, Math.min(i * 90, 450));
+      });
+    }, { rootMargin: '0px 0px -9% 0px', threshold: 0.05 });
+    els.forEach((el) => this._io.observe(el));
+  }
+
+  renderVals() {
+    const layout = this.props.heroLayout ?? 'Centered - classic VSL';
+    const heroSplit = layout.indexOf('Split') === 0;
+    const heroBroadcast = layout.indexOf('Broadcast') === 0;
+    const heroCentered = !heroSplit && !heroBroadcast;
+
+    const navBgStyle = {
+      position: 'absolute', inset: 0,
+      background: this.state.scrolled ? 'rgba(10,31,60,0.82)' : 'transparent',
+      backdropFilter: this.state.scrolled ? 'blur(12px)' : 'none',
+      WebkitBackdropFilter: this.state.scrolled ? 'blur(12px)' : 'none',
+      borderBottom: this.state.scrolled ? '1px solid rgba(255,255,255,0.08)' : '1px solid transparent',
+      transition: 'background 200ms cubic-bezier(0.22,1,0.36,1), border-color 200ms'
+    };
+
+    const stickyWrapStyle = {
+      position: 'fixed', left: 0, right: 0, bottom: 0, zIndex: 60,
+      background: 'rgba(10,31,60,0.92)',
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)',
+      borderTop: '1px solid rgba(255,255,255,0.1)',
+      boxShadow: '0 -12px 40px rgba(3,10,22,0.5)',
+      transform: this.state.showSticky ? 'translateY(0)' : 'translateY(110%)',
+      transition: 'transform 360ms cubic-bezier(0.22,1,0.36,1)'
+    };
+
+    const faqs = FAQS.map((f, i) => {
+      const isOpen = this.state.openFaq === i;
+      return {
+        q: f.q,
+        a: f.a,
+        toggle: () => this.setState({ openFaq: isOpen ? -1 : i }),
+        chevStyle: {
+          flex: 'none', color: '#00A7B2', fontSize: '18px',
+          transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+          transition: 'transform 300ms cubic-bezier(0.22,1,0.36,1)'
+        },
+        bodyStyle: {
+          maxHeight: isOpen ? '560px' : '0px',
+          opacity: isOpen ? 1 : 0,
+          overflow: 'hidden',
+          transition: 'max-height 380ms cubic-bezier(0.22,1,0.36,1), opacity 300ms cubic-bezier(0.22,1,0.36,1)'
+        }
+      };
+    });
+
+    const testimonials = TESTIMONIALS.map((t) => {
+      const playing = this.state.playingVideo === t.id;
+      return {
+        name: t.name, role: t.role, kpi: t.kpi, title: t.title, quote: t.quote,
+        playing: playing,
+        idle: !playing,
+        thumbStyle: {
+          position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+          backgroundImage: 'url(https://vumbnail.com/' + t.id + '_large.jpg)',
+          backgroundSize: 'cover', backgroundPosition: 'center'
+        },
+        embedUrl: playing ? ('https://player.vimeo.com/video/' + t.id + '?autoplay=1&title=0&byline=0&portrait=0') : '',
+        play: () => this.setState({ playingVideo: t.id })
+      };
+    });
+
+    return {
+      heroCentered,
+      heroSplit,
+      heroBroadcast,
+      navBgStyle,
+      stickyWrapStyle,
+      stickyCtaOn: this.props.stickyCta ?? true,
+      agencyNote: this.props.showAgencyNote ?? true,
+      faqs,
+      testimonials
+    };
+  }
+}
+</script>
+</body>
+</html>
